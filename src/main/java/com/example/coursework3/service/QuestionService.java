@@ -4,6 +4,7 @@ import com.example.coursework3.model.Question;
 
 import java.util.Collection;
 
+
 public interface QuestionService {
 
   public Question add(String question, String answer);

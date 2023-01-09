@@ -2,6 +2,7 @@ package com.example.coursework3.model;
 
 import java.util.Objects;
 
+
 public class Question{
     private final String question;
     private final String answer;
