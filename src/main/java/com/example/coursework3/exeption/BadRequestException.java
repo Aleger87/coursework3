@@ -1,6 +1,5 @@
 package com.example.coursework3.exeption;
 
-
 public class BadRequestException extends RuntimeException {
     public BadRequestException() {
     }
