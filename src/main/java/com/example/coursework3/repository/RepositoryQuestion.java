@@ -5,8 +5,6 @@ import com.example.coursework3.model.Question;
 import java.util.Set;
 
 
-
-
 public interface RepositoryQuestion {
 
     public Question add(Question question);
