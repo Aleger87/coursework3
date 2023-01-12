@@ -1,5 +1,6 @@
 package com.example.coursework3.service;
 
+import com.example.coursework3.exeption.BadRequestException;
 import com.example.coursework3.model.Question;
 import com.example.coursework3.repository.RepositoryQuestionImpl;
 import org.junit.jupiter.api.Assertions;
@@ -59,6 +60,34 @@ class JavaQuestionServiceTest {
     void getRandomQuestion() {
         when(repositoryQuestion.getRandomQuestion()).thenReturn(question);
         Assertions.assertEquals(repositoryQuestion.getRandomQuestion(), question);
+    }
+
+    @Test
+    void getAddWhenDataNull() {
+        Assertions.assertThrows(BadRequestException.class, () -> {
+            javaQuestionService.add(null, null);
+        });
+    }
+
+    @Test
+    void getAddWhenDataIsBlank() {
+        Assertions.assertThrows(BadRequestException.class, () -> {
+            javaQuestionService.add("", "");
+        });
+    }
+
+    @Test
+    void getRemoveWhenDataNull() {
+        Assertions.assertThrows(BadRequestException.class, () -> {
+            javaQuestionService.remove(null, null);
+        });
+    }
+
+    @Test
+    void getRemoveWhenDataIsBlank() {
+        Assertions.assertThrows(BadRequestException.class, () -> {
+            javaQuestionService.remove("", "");
+        });
     }
 
 }

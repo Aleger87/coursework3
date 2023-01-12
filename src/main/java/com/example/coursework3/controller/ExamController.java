@@ -12,7 +12,7 @@ import java.util.Collection;
 @RequestMapping("/exam/java/")
 public class ExamController {
 
-    ExaminerServiceImpl examinerService;
+   private final ExaminerServiceImpl examinerService;
 
     public ExamController(ExaminerServiceImpl examinerService) {
         this.examinerService = examinerService;
